@@ -10,6 +10,7 @@
   --border-button-color: #eeeeee;
   --hero-gradient-color: rgba(47, 48, 58, 0.4);
   --link-ikon: #afb1b8;
+  --title-background: rgba(47, 48, 58, 0.8);
 
   /* logo fonts */
   font-family: "Raleway", sans-serif;
@@ -30,6 +31,9 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+img {
+  display: block;
 }
 .logo-nav {
   display: inherit;
@@ -86,6 +90,9 @@ header {
   display: flex;
   border-bottom: 1px solid var(--border-color);
 }
+.webstudio {
+  border: none;
+}
 .navigation {
   margin: 0;
   display: flex;
@@ -118,6 +125,16 @@ header {
 .nav-active-anchor {
   color: var(--logo-color);
 }
+.nav-active-anchor::after {
+  width: 48px;
+  height: 4px;
+  display: block;
+  background-color: #2196f3;
+  border-radius: 2px;
+  content: "";
+  margin-top: 28px;
+}
+
 .contacts {
   display: flex;
   margin-top: 32px;
@@ -274,6 +291,28 @@ header {
   margin-right: 0;
 }
 
+.what-wee-do-container {
+  position: relative;
+}
+
+.img-title-what {
+  position: absolute;
+  bottom: 0;
+
+  padding-top: 27px;
+  padding-bottom: 27px;
+  margin: 0;
+  width: 100%;
+  background-color: var(--title-background);
+  color: var(--white);
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-style: normal;
+}
 /* section teem  photo  */
 
 .teem {
@@ -499,6 +538,34 @@ footer {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+
+.portfolio-map-descr {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--white);
+  letter-spacing: 0.03em;
+  background-color: rgba(33, 150, 243, 0.9);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 63px 24px 63px 24px;
+  transform: translateY(100%);
+  margin: 0;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-descr-list-item {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-descr-list-item:hover .portfolio-map-descr {
+  transform: translateY(0);
+}
+
 .button-list {
   padding: 6px 22px 6px 22px;
 
@@ -528,6 +595,7 @@ footer {
 .portfolio-descr-position {
   padding-bottom: 20px;
 }
+
 .img-portfolio-list {
   border: 1px solid var(--border-button-color);
   box-sizing: border-box;
@@ -535,6 +603,8 @@ footer {
   margin-top: 20px;
   list-style-type: none;
   text-align: left;
+  width: 370px;
+  height: 404px;
 }
 
 .img-portfolio-list:hover,
@@ -710,8 +780,6 @@ footer {
   height: 100%;
   top: 0;
   left: 0;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) visibility 250ms
-    cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -746,9 +814,11 @@ footer {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-.is-hiden {
+.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
