@@ -230,10 +230,14 @@ header {
 }
 .title-details {
   width: 270px;
-
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   margin-top: 0;
   margin: 0;
-  font-weight: 700px;
   color: var(--txt-title-color);
 }
 
@@ -260,9 +264,13 @@ header {
 
 /* section what we do */
 
+.section-what-wee-do {
+  padding-bottom: 94px;
+}
+
 .what-we-do {
   align-items: center;
-  padding-bottom: 94px;
+
   background-color: var(--white);
 }
 .what-we-do-title {
@@ -340,9 +348,13 @@ header {
   line-height: 19px;
   color: var(--txt-title-color);
   text-align: center;
-  margin-top: 30px;
+  margin-top: 0;
   margin-bottom: 10px;
 }
+.teem-name-position {
+  padding-top: 30px;
+}
+
 .teem-descr {
   color: var(--txt-description);
   font-style: normal;
@@ -411,18 +423,18 @@ footer {
   background-color: var(--bacground-hero);
   min-width: 1200px;
   margin-left: 0;
-
-  margin-top: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .footer-studio {
   margin-top: 0;
   display: flex;
 }
 .logo-footer {
-  margin-top: 60px;
   color: var(--white);
-
   margin-left: 0;
+  padding-top: 0;
+  padding-bottom: 20px;
 }
 
 .footer-style {
@@ -434,7 +446,7 @@ footer {
   margin-left: 0;
   list-style-type: none;
   padding: 0;
-  margin-top: 20px;
+  margin-top: 0;
 
   margin-bottom: 0;
 }
@@ -458,7 +470,7 @@ footer {
 
 .footer-social-link {
   box-sizing: border-box;
-  margin-top: 72px;
+  margin-top: 15px;
   margin-left: 70px;
 }
 
@@ -513,6 +525,10 @@ footer {
 
 /* section portfolio work */
 
+.portfolio-work {
+  margin-top: 94px;
+}
+
 .button-portfolio {
   margin-bottom: 20px;
 }
@@ -521,7 +537,7 @@ footer {
   display: flex;
   justify-content: center;
   list-style-type: none;
-  margin-top: 94px;
+  margin-top: 0;
   margin-bottom: 50px;
   padding-left: 0;
 }
@@ -594,6 +610,8 @@ footer {
 }
 .portfolio-descr-position {
   padding-bottom: 20px;
+  padding-left: 24px;
+  padding-top: 20px;
 }
 
 .img-portfolio-list {
@@ -620,14 +638,12 @@ footer {
 }
 
 .list-img-decsr {
-  margin-left: 20px;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 36px;
   color: var(--txt-title-color);
-  margin-top: 20px;
-  margin-bottom: 0;
+  margin: 0;
 }
 .list-descr-program {
   color: var(--txt-description);
@@ -636,7 +652,8 @@ footer {
   font-size: 16px;
   line-height: 30px;
   margin-top: 4px;
-  margin-left: 20px;
+
+  display: inline-block;
 }
 
 .img-portfolio-list:nth-child(3n) {
@@ -648,6 +665,22 @@ footer {
 
 .list-contact-icon {
   display: flex;
+}
+
+.nav-active-anchor-portfolio {
+  color: var(--logo-color);
+}
+
+.nav-active-anchor-portfolio::after {
+  display: block;
+  width: 78px;
+  height: 4px;
+  content: "";
+  border-radius: 2px;
+  background-color: var(--logo-color);
+  margin-top: 28px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .phone {
@@ -718,6 +751,7 @@ footer {
 }
 .client-vector-img {
   box-sizing: border-box;
+  fill: var(--link-ikon);
 }
 .logo-item-link {
   width: 100%;
@@ -728,15 +762,18 @@ footer {
   align-items: center;
 }
 
-.logo-item-link:hover,
-.logo-item-link:focus {
+.logo-item-link:hover .client-vector-img {
   fill: var(--logo-color);
 }
 
-.logo-item-link:hover,
-.logo-item-link:focus {
-  border: 1px solid var(--logo-color);
-  border-radius: 4px;
+.logo-item-link:focus .client-vector-img {
+  border-color: var(--logo-color);
+  fill: var(--logo-color);
+}
+
+.my-client-item:hover,
+.my-client-item:focus {
+  border-color: var(--logo-color);
 }
 
 /* LOGO SIZE */
