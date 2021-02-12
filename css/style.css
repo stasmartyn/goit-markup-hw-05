@@ -101,13 +101,14 @@ header {
 }
 .list-anchor {
   margin-left: 50px;
+  height: 16px;
 }
 
 .nav-anchor {
   display: block;
   color: var(--txt-title-color);
   width: 68px;
-  height: 16px;
+
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
@@ -148,7 +149,7 @@ header {
   font-weight: 500px;
   margin-top: 0px;
   align-items: baseline;
-  display: flex;
+  display: block;
 }
 
 .conctacts-link-item {
@@ -165,6 +166,7 @@ header {
 .conctacts-link:hover > .list-contact-icon {
   fill: var(--logo-color);
 }
+
 /* section hero  */
 
 .section-my-hero {
@@ -239,6 +241,7 @@ header {
   margin-top: 0;
   margin: 0;
   color: var(--txt-title-color);
+  margin-bottom: 10px;
 }
 
 .list-details-descr {
@@ -257,8 +260,8 @@ header {
   margin-right: 0;
 }
 .text-compani {
-  margin-top: 10px;
   margin-bottom: 0;
+  margin: 0;
   color: var(--txt-description);
 }
 
@@ -306,16 +309,16 @@ header {
 .img-title-what {
   position: absolute;
   bottom: 0;
-
-  padding-top: 27px;
-  padding-bottom: 27px;
+  min-height: 70px;
   margin: 0;
   width: 100%;
   background-color: var(--title-background);
   color: var(--white);
   font-size: 14px;
   line-height: 16px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   font-weight: bold;
@@ -353,6 +356,9 @@ header {
 }
 .teem-name-position {
   padding-top: 30px;
+  padding-bottom: 16px;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 .teem-descr {
@@ -385,7 +391,7 @@ header {
 .teem-link {
   display: flex;
   list-style-type: none;
-  margin-top: 16px;
+
   margin-bottom: 30px;
   padding-left: 0;
   justify-content: center;
@@ -411,6 +417,7 @@ header {
   border: none;
   border-radius: 50px;
   fill: var(--link-ikon);
+  outline: none;
 }
 .link-item:hover,
 .link-item:focus {
@@ -526,7 +533,7 @@ footer {
 /* section portfolio work */
 
 .portfolio-work {
-  margin-top: 94px;
+  padding-top: 94px;
 }
 
 .button-portfolio {
@@ -612,6 +619,7 @@ footer {
   padding-bottom: 20px;
   padding-left: 24px;
   padding-top: 20px;
+  padding-right: 24px;
 }
 
 .img-portfolio-list {
@@ -663,10 +671,6 @@ footer {
   margin-top: 0;
 }
 
-.list-contact-icon {
-  display: flex;
-}
-
 .nav-active-anchor-portfolio {
   color: var(--logo-color);
 }
@@ -700,7 +704,9 @@ footer {
   height: 120px;
   align-items: center;
   background-color: var(--tem-section);
-  padding: 25px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .vector-img {
@@ -719,6 +725,7 @@ footer {
 .my-client {
   background-color: var(--white);
   padding-bottom: 94px;
+  padding-top: 94px;
 }
 
 .client-title {
@@ -729,7 +736,7 @@ footer {
   line-height: 42px;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-top: 94px;
+  margin-top: 0;
   margin-bottom: 50px;
 }
 .my-client-list {
@@ -774,6 +781,7 @@ footer {
 .my-client-item:hover,
 .my-client-item:focus {
   border-color: var(--logo-color);
+  fill: var(--logo-color);
 }
 
 /* LOGO SIZE */
