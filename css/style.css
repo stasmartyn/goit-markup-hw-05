@@ -588,6 +588,9 @@ footer {
 .portfolio-descr-list-item:hover .portfolio-map-descr {
   transform: translateY(0);
 }
+.img-portfolio-list:hover.portfolio-map-descr {
+  transform: translateY(0);
+}
 
 .button-list {
   padding: 6px 22px 6px 22px;
